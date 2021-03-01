@@ -353,6 +353,11 @@ func verbose(message, module = default_module_name, error_code = -1):
 	put(VERBOSE, message, module, error_code)
 
 
+func trace(message, module = default_module_name, error_code = -1):
+	"""Alias for level VERBOSE"""
+	verbose(message, module, error_code)
+
+
 func debug(message, module = default_module_name, error_code = -1):
 	"""Log a message in the given module with level DEBUG."""
 	put(DEBUG, message, module, error_code)

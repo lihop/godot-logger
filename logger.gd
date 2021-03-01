@@ -370,11 +370,13 @@ func info(message, module = default_module_name, error_code = -1):
 
 func warn(message, module = default_module_name, error_code = -1):
 	"""Log a message in the given module with level WARN."""
+	push_warning(message)
 	put(WARN, message, module, error_code)
 
 
 func error(message, module = default_module_name, error_code = -1):
 	"""Log a message in the given module with level ERROR."""
+	push_error(message)
 	put(ERROR, message, module, error_code)
 
 
